@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>📋 AI-Powered To-Do List</h1>
+
+    <div class="input-container">
+        <input type="text" id="task-input" placeholder="Enter a task">
+        <input type="date" id="due-date">
+        <input type="time" id="due-time">
+        <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button onclick="addManualTask()">➕ Add Task</button>
+        <button onclick="generateTasks()">🔮 AI Assist</button>
+    </div>
+
+    <h3>🔮 AI Suggested Tasks</h3>
+    <div id="ai-container"></div>
+
+    <h3>📌 Your Tasks</h3>
+    <table id="task-table">
+        <tr>
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Priority</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Done</th>
+        </tr>
+    </table>
+
+    <h3>✔ Completed Tasks</h3>
+    <table id="completed-task-table">
+        <tr>
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Priority</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
